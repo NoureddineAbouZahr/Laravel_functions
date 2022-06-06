@@ -1,5 +1,7 @@
 <?php
-
+namespace App\HTTP\Controllers;
+use Illuminate\HTTP\Request;
+class seconds extends Controller{
 function time_seconds(){
     $date='14/04/1732';
     $date=str_replace('/','-',$date);
@@ -12,5 +14,11 @@ function time_seconds(){
     $seconds=((($dayss*24)*60)*3600);
     echo $seconds;
 
+    return response()->json([
+        "message"=>"success",
+        "time"=>$seconds
+    ]);
 }
-time_seconds();
+}
+
+

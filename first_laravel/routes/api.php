@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Controllers\pallindrom;
 use Illuminate\Http\Controllers\seconds;
+use Illuminate\Http\Controllers\output_texts;
 
 
 
@@ -24,4 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/pallindrom',[pallindrom::class,"num_of_pallindroms"]);
 Route::get('/time',[seconds::class, "time_seconds"]);
+Route::get('/text-attachments',[output_texts::class, "text"]);
+
 

@@ -1,4 +1,7 @@
 <?php
+namespace App\HTTP\Controllers;
+use Illuminate\HTTP\Request;
+class pallindrom extends Controller{
 function check_if_palindrom($string){
     $left=0;
     $right=strlen($string);
@@ -28,8 +31,12 @@ function num_of_palindroms($array){
 
 
     }
+    return response()->json([
+        "message"=>"success",
+        "num_of_pals"=>$num
+    ]);
 
-}
+}}
 
 
 
