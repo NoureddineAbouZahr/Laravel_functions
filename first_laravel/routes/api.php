@@ -22,6 +22,6 @@ use Illuminate\Http\Controllers\seconds;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/pallindrom', num_of_pallindroms());
-Route::get('/time', time_seconds());
+Route::get('/pallindrom',[pallindrom::class,"num_of_pallindroms"]);
+Route::get('/time',[seconds::class, "time_seconds"]);
 
